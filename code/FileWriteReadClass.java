@@ -7,21 +7,16 @@ package code;
       import java.io.FileOutputStream;
       import java.io.FilterOutputStream;
       import java.io.InputStreamReader;
-
                   public class FileWriteReadClass {
                         Scanner input = new Scanner(System.in);
-
                         public void getWriteReadFun() {
-
                               System.out.println("input you documentions for output the result : ");
                               String name = input.nextLine();
                               String filePath = "/Users/developer/Desktop/java/texts.text";
-
                               try {
                                     File data = new File(filePath);
                                     FileOutputStream file = new FileOutputStream(data);
                                     FilterOutputStream filter = new FilterOutputStream(file);
-
                                     byte b[] = name.getBytes();
                                     System.out.println(b);
                                     filter.write(b);
@@ -34,7 +29,6 @@ package code;
                                     String strLine;
                                     while ((strLine = br.readLine()) != null) {
                                           System.out.println("You have Result : ");
-
                                           System.out.println(strLine);
                                     }
                                     fstream.close();
